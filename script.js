@@ -15,4 +15,9 @@ function generateTiles(tilesInRow) {
     }
 }
 
-generateTiles(7);
+const tiles = document.querySelectorAll(".tile");
+tiles.forEach(tile => tile.addEventListener("mouseover", colorTile));
+
+function colorTile() {
+    this.style.backgroundColor = "black";
+}
