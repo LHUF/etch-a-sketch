@@ -12,5 +12,6 @@ body {
 }
 
 .tile {
-    border: 0.1px dashed grey;
+    border: 0.1px dashed rgb(219, 219, 219);
 }
+
