@@ -1,7 +1,7 @@
 body {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: slategrey;
+    background-color: #006699;
 }
 
 #clearbtn {
@@ -9,4 +9,8 @@ body {
     width: 500px;
     height: 50px;
     border: 2.5px solid black;
+}
+
+.tile {
+    border: 0.1px dashed grey;
 }
