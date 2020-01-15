@@ -1,3 +1,5 @@
+generateTiles(20);
+
 function generateTiles(tilesInRow) {
     const gridCanvas = document.getElementById("gridCanvas");
     gridCanvas.style.height = "700px";
@@ -13,11 +15,22 @@ function generateTiles(tilesInRow) {
         tile.classList.add("tile");
         gridCanvas.appendChild(tile);
     }
+    const tiles = document.querySelectorAll(".tile");
+    tiles.forEach(tile => tile.addEventListener("mouseover", colorTile));
 }
-
-const tiles = document.querySelectorAll(".tile");
-tiles.forEach(tile => tile.addEventListener("mouseover", colorTile));
 
 function colorTile() {
     this.style.backgroundColor = "black";
+}
+
+const clear = document.getElementById("clearbtn");
+clear.addEventListener("click", clearCanvas);
+
+function clearCanvas() {
+   const canvas = document.getElementById("gridCanvas");
+   while (canvas.hasChildNodes()) {
+       canvas.removeChild(canvas.lastChild);
+   }
+   generateTiles(prompt("How many tiles per side?"));
+    
 }
